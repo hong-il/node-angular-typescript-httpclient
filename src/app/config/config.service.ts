@@ -17,4 +17,12 @@ export class ConfigService {
   getConfig() {
     return this.http.get(this.configUrl);
   }
+
+  getConfig_1() {
+    return this.http.get(this.configUrl);
+  }
+
+  getConfig_2() {
+    return this.http.get<Config>(this.configUrl);
+  }
 }
