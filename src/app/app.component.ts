@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'node-angular-typescript-httpclient';
+  showConfig = true;
+
+  toggleConfig() { this.showConfig = !this.showConfig; }
 }
