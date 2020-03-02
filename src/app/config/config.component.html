@@ -3,6 +3,7 @@
   <button (click)="clear(); showConfig()">get</button>
   <button (click)="clear(); showConfigResponse()">getResponse</button>
   <button (click)="clear()">clear</button>
+  <button (click)="clear(); makeError()">error</button>
   <span *ngIf="config">
     <p>Heroes API URL is "{{config.heroesUrl}}"</p>
     <p>Textfile URL is "{{config.textfile}}"</p>
@@ -14,3 +15,4 @@
     </div>
   </span>
 </div>
+<p *ngIf="error" class="error">{{error | json}}</p>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Config, ConfigService } from './config.service';
 
 @Component({
@@ -7,14 +7,12 @@ import { Config, ConfigService } from './config.service';
   providers: [ ConfigService ],
   styles: ['.error {color: red;}']
 })
-export class ConfigComponent implements OnInit {
+export class ConfigComponent {
+  error: any;
   headers: string[];
   config: Config;
 
   constructor(private configService: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
   clear() {
     this.config = undefined;
@@ -50,6 +48,10 @@ export class ConfigComponent implements OnInit {
         // access the body directly, which is typed as `Config`.
         this.config = { ... resp.body };
       });
+  }
+
+  makeError() {
+    this.configService.makeIntentionalError().subscribe(null, error => this.error = error );
   }
 
 }
