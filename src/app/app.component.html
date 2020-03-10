@@ -1,7 +1,11 @@
 <h1>HTTP Sample</h1>
 <div>
+  <input type="checkbox" id="heroes" [checked]="showHeroes" (click)="toggleHeroes()">
+  <label for="heroes">Heroes</label>
+
   <input type="checkbox" id="config" [checked]="showConfig" (click)="toggleConfig()">
   <label for="config">Config</label>
 </div>
 
+<app-heroes *ngIf="showHeroes"></app-heroes>
 <app-config *ngIf="showConfig"></app-config>
