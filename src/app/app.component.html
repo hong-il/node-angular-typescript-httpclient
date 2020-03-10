@@ -5,7 +5,11 @@
 
   <input type="checkbox" id="config" [checked]="showConfig" (click)="toggleConfig()">
   <label for="config">Config</label>
+
+  <input type="checkbox" id="downloader" [checked]="showDownloader" (click)="toggleDownloader()">
+  <label for="downloader">Downloader</label>
 </div>
 
 <app-heroes *ngIf="showHeroes"></app-heroes>
 <app-config *ngIf="showConfig"></app-config>
+<app-downloader *ngIf="showDownloader"></app-downloader>
