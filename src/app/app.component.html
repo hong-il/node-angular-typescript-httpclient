@@ -8,8 +8,12 @@
 
   <input type="checkbox" id="downloader" [checked]="showDownloader" (click)="toggleDownloader()">
   <label for="downloader">Downloader</label>
+
+  <input type="checkbox" id="uploader" [checked]="showUploader" (click)="toggleUploader()">
+  <label for="uploader">Uploader</label>
 </div>
 
 <app-heroes *ngIf="showHeroes"></app-heroes>
 <app-config *ngIf="showConfig"></app-config>
 <app-downloader *ngIf="showDownloader"></app-downloader>
+<app-uploader *ngIf="showUploader"></app-uploader>
