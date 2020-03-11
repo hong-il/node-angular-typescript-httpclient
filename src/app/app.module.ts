@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DownloaderComponent } from './downloader/downloader.component';
+import { UploaderComponent } from './uploader/uploader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfigComponent,
     HeroesComponent,
-    DownloaderComponent
+    DownloaderComponent,
+    UploaderComponent
   ],
   imports: [
     BrowserModule,
