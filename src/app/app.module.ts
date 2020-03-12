@@ -8,6 +8,7 @@ import { ConfigComponent } from './config/config.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DownloaderComponent } from './downloader/downloader.component';
 import { UploaderComponent } from './uploader/uploader.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UploaderComponent } from './uploader/uploader.component';
     ConfigComponent,
     HeroesComponent,
     DownloaderComponent,
-    UploaderComponent
+    UploaderComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
