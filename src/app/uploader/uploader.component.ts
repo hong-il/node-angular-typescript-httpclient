@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import {
+  HttpClient, HttpEvent, HttpEventType, HttpProgressEvent,
+  HttpRequest, HttpResponse, HttpErrorResponse
+} from '@angular/common/http';
 
-@Component({
-  selector: 'app-uploader',
-  templateUrl: './uploader.component.html',
-  styleUrls: ['./uploader.component.scss']
-})
-export class UploaderComponent implements OnInit {
+import { of } from 'rxjs';
+import { catchError, last, map, tap } from 'rxjs/operators';
 
-  constructor() { }
+import { MessageService } from '../message.service';
 
-  ngOnInit(): void {
+@Injectable()
+export class UploaderService {
+  constructor(
+    private http: HttpClient,
+    private messenger: MessageService) {}
+
+  upload(file: File) {
+    if (!file) { return; }
+
+    const req = new HttpRequest('POST', '/upload/file', file, {
+      reportProgress: true
+    });
+
+    return this.http.request(req);
   }
-
 }
