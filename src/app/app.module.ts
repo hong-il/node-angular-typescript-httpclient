@@ -9,6 +9,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DownloaderComponent } from './downloader/downloader.component';
 import { UploaderComponent } from './uploader/uploader.component';
 import { MessagesComponent } from './messages/messages.component';
+import { PackageSearchComponent } from './package-search/package-search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MessagesComponent } from './messages/messages.component';
     HeroesComponent,
     DownloaderComponent,
     UploaderComponent,
-    MessagesComponent
+    MessagesComponent,
+    PackageSearchComponent
   ],
   imports: [
     BrowserModule,
