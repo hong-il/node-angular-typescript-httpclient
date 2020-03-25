@@ -11,6 +11,9 @@
 
   <input type="checkbox" id="uploader" [checked]="showUploader" (click)="toggleUploader()">
   <label for="uploader">Uploader</label>
+
+  <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+  <label for="search">Search</label>
 </div>
 
 <app-heroes *ngIf="showHeroes"></app-heroes>
@@ -18,3 +21,4 @@
 <app-config *ngIf="showConfig"></app-config>
 <app-downloader *ngIf="showDownloader"></app-downloader>
 <app-uploader *ngIf="showUploader"></app-uploader>
+<app-package-search *ngIf="showSearch"></app-package-search>
